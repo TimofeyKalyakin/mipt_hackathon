@@ -1,3 +1,7 @@
 import torch
+from utils.metal_check import check_device
 
-print("PyTorch работает") if torch.cuda.is_available() else print ("Видюхи нет")
+
+device = check_device()
+
+print(f"Используем устройство: {device}")
